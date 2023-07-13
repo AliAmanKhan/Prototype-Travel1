@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: bisque;
+            font-family: "poppins";
+        }
+
+        header {
+            height: 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .fa-aviato{
+            font-size: 120px;
+            margin-top: 50px;
+            color: brown;
+            margin-right: 50px;
+        }
+        header ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 50vw;
+        }
+        header ul li a {
+            text-decoration: none;
+            font-family: "poppins";
+            font-size: 16px;
+            margin: 10px;
+            color: black;
+            font-weight: 600;
+            z-index: 100;
+        }
+        header ul li{
+            list-style: none;
+            margin-top: 40px;
+        }
+        .box{
+            overflow: hidden;
+            width: 100%;
+        }
+        .white-box{
+            height: 200vh;
+            width: 100vw;
+            border-radius: 50%;
+            background-color: white;
+            /* margin-left: -50vw; */
+            position: relative;
+            animation-name: short-up-down;
+            animation-timing-function: linear;
+            animation-duration: 5s;
+            animation-delay: 0;
+            animation-iteration-count: infinite;
+        }
+        @keyframes short-up-down {
+            0%{
+                margin-left: -50vw;
+            }
+            50%{
+                margin-left: -47vw;
+            }
+            100%{
+                margin-left: -50vw;
+            }
+        }
+        .white-box-2{
+            height: 200px;
+            width: 200px;
+            background-color: white;
+            border-radius: 50%;
+            /* margin-top: -50vh;
+            margin-right: -100vw; */
+            position: absolute;
+            /* right: 0;
+            top: 0; */
+            animation-name: up-down;
+            animation-duration: 60s;
+            animation-delay: 0;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes up-down {
+            0%{
+                right: 0;
+                top: 0;
+            }
+            25%{
+                right: 10vw;
+                top: 200vh;
+            }
+            50%{
+                right: 50vw;
+                top: 0;
+            }
+            75%{
+                right: 60vw;
+                top: 200vh;
+            }
+            100%{
+                right: 0;
+                top: 0;
+            }
+        }
+        .material{
+            position: absolute;
+            top: 20vh;
+            left: 5vw;
+            z-index: 100;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .right{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: left;
+        }
+        .right h3{
+            color: orange;
+            margin-left: -22.5vw;
+        }
+        .head{
+            font-size: xxx-large;
+            font-weight: bold;
+        }
+        .content{
+            font-weight: lighter;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button{
+            margin: 20px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            box-shadow: 3px 4px 0px 1px rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid orange;
+            background-color: black;
+            font-size: 2vh;
+            font-weight: bold;
+            color: white;
+            height: 5vh;
+            width: 10vw;
+        }
+
+        button:hover{
+            border-color: black;
+            background-color: orange;
+            color: black;
+            box-shadow: 3px, 4px, 0px, 1px orange;
+            transform: translateY(-2px);
+            /* animation-name: transform;
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            animation-iteration-count: 1; */
+        }
+        /* @keyframes transform { 
+            100%{
+                margin-top: -1px;
+            } 
+        } */
+        .left{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img img{
+            height: 70vh;
+            z-index: 200;
+        }
+        .img{
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            background-color: orange;
+            position: absolute;
+            top: 5vh;
+        }
+        .middle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .whywe {
+            position: absolute;
+            top: 100vh;
+            text-align: left;
+            width: 90vw;
+            height: 100vh;
+            font-weight: bold;
+            font-size: large;
+        }
+        footer{
+            height: 50vh;
+            background-image: linear-gradient(50deg, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.6) 50%), url(footer-image.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* width: 100%; */
+            /* position: sticky;
+            bottom: 0; */
+        }
+        .links a i{
+            font-size: 25px;
+            color: white;
+            margin: 2vh;
+        } 
+        .other-links{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <div class="logo"><i class="fab fa-aviato"></i></div>
+            <ul>
+                <li><a href="">Services</a></li>
+                <li><a href="">Destination</a></li>
+                <li><a href="">Booking</a></li>
+                <li><a href="">Testimonial</a></li>
+                <li><a href="">About Us</a></li>
+            </ul>
+        </header>
+        <div class="white-box"></div>
+        <div class="white-box-2"></div>
+        <div class="material">
+           <div class="right">
+            <h3>The Best Destinations Around The World</h3>
+            <div class="head">Welcome to the [Travel Agency Name]</div>
+            <div class="content"><p>
+                Embark on unforgettable journeys with [Travel Agency Name]. Relax on the beach, trek mountains, immerse in culture. We make travel dreams a reality. Our experts curate exceptional experiences tailored to you. Trust us to create unforgettable memories.
+            </p>
+            </div>
+            <div class="buttons">
+                <button class="contact-btn">Contact</button>
+                <button class="book-btn">Booking</button>
+            </div>
+           </div>
+           <div class="left">
+            <div class="img">
+                <img src="adventure.png" alt="Adventure">
+            </div>
+           </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="whywe">
+                Why Choose Us?<br>
+
+1. Unparalleled Expertise: With years of experience in the travel industry, we possess in-depth knowledge of destinations worldwide. Our team of travel enthusiasts has personally explored numerous locations, ensuring that you receive accurate and up-to-date information about the best places to visit, hidden gems, and insider tips.
+<br>
+2. Tailor-Made Itineraries: We understand that every traveler is different, which is why we specialize in creating customized itineraries. From solo adventurers and couples to families and group tours, we carefully design travel plans that align with your specific needs, interests, and budget. Get ready for a journey that reflects your personal style and preferences.
+<br>
+3. Unbeatable Value: At [Travel Agency Name], we believe that remarkable travel experiences don't have to break the bank. We strive to offer competitive prices without compromising on quality. Our extensive network of trusted partners and suppliers allows us to secure exclusive deals and discounts, ensuring you receive the best value for your money.
+<br>
+4. Seamless Planning: Planning a trip can be overwhelming, but with us, it's hassle-free. Our dedicated team handles all the logistics, from booking flights and accommodations to arranging transportation and activities. We take care of the details, so you can focus on creating cherished memories during your journey.
+<br>
+5. Trust and Reliability: [Travel Agency Name] is a trusted name in the travel industry. We are fully licensed and insured, giving you peace of mind when entrusting us with your travel arrangements. We take pride in our reputation for reliability and integrity, ensuring that you have a safe and enjoyable journey from start to finish.
+<br>
+Begin Your Adventure Today!
+<br>
+It's time to embark on the journey of a lifetime. Let us take care of the details while you immerse yourself in the wonders of the world. Contact us now to start planning your next travel adventure with [Travel Agency Name]. Together, let's create memories that will last a lifetime.
+        </div>
+    </div>
+    <div class="vehicles">
+
+    </div>
+    <footer>
+        
+        <div class="links">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-google-play"></i></a>
+                <a href=""><i class="fab fa-google"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <!-- <a href=""><i class="fab fa-"></i></a> -->
+        </div>
+        <div class="other-links">
+            <h3>Other Links</h3>
+            <p>Serivices</p>
+            <p>Testimonials</p>
+            <p>About Us</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="other-links"> @ 2023 [Travel Agency Name] &copy; All Rights Reserved</div>
+    </footer>
+</body>
+
+</html>
